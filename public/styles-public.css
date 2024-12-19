@@ -125,3 +125,8 @@ body {
         line-height: 1.4;
     }
 }
+
+.rounded-image {
+    border-radius: 40px; /* Rounds the edges */
+  }
+  
