@@ -9,15 +9,17 @@ body {
     color: #fff;
     line-height: 1.6;
     width: 100%;
-    height: 100vh;
     margin: 0;
 }
 
 /* Background styling */
 .hero {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     background: url('https://visme.co/blog/wp-content/uploads/2016/09/website-color-schemes-header.jpg') no-repeat center center/cover;
+    background-size: cover;
+    background-position: 50%;
+    background-attachment: fixed;
 }
 
 .hero::after {
@@ -38,20 +40,22 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
     text-align: center;
     padding: 20px;
+    height: 100%;
 }
 
 .content h1 {
     font-size: 3rem;
     margin-bottom: 20px;
+    word-wrap: break-word;
 }
 
 .content p {
     font-size: 1.2rem;
-    max-width: 600px;
-    margin-bottom: 30px;
+    max-width: 90%;
+    margin: 0 auto 30px auto;
+    word-wrap: break-word;
 }
 
 .content a {
@@ -67,15 +71,16 @@ body {
 .bluey {
     background-color: #0246c5;
 }
+
 .content a:hover {
     background-color: #0056b3;
 }
 
 .button-group {
-    display: flex; /* Enable flexbox */
-    justify-content: center; /* Center buttons horizontally */
-    gap: 10px; /* Add space between buttons */
-    margin-top: 20px; /* Add spacing from other elements */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
 }
 
 .btn {
@@ -91,4 +96,30 @@ body {
 
 .btn:hover {
     background-color: #4b0082;
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 2rem; /* Reduce size for smaller screens */
+    }
+
+    .content p {
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    .content img {
+        width: 150px; /* Adjust image size */
+    }
+}
+
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 1.8rem;
+    }
+
+    .content p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
 }
