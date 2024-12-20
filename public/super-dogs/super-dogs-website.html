@@ -5,66 +5,104 @@
     <title>Super Dogs Website</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
-
-  <header>
-    <h1 id="title">Super Dogs Website</h1>
-    <p id="description">This is a website dedicated to collections of dogs doing SUPER things</p>
-  </header>
-
   <body>
-    <h2>Registration Form</h2>
-    <p class="small-text">Please fill out the form to upload pictures of your dog doing a super thing</p>
-    <form id="survey-form">
-      <fieldset>
-        <label id= "name-label" for="name">Enter Your Dog's Name: <input id="name" name="name" type="text" placeholder="Jacky" required /></label>
-        <label id= "trick-label" for="trick">Enter Your Dog's SUPER trick: <input id="trick" name="trick" type="text" placeholder="jumping hoops" required /></label>
-        <label id= "email-label" for="email">Enter Your Email: <input id="email" name="email" type="email" placeholder="jilliandoe@gmail.com" required /></label>
-       <label id= "number-label" for="number">Enter Your Dog's Age (a number): <input id="number" name="number" type="number" min="0" max="25" placeholder="7" required /></label>
-      </fieldset>
-      
-      <fieldset>
-        <label for="dropdown">What is your dog's hair color?
-          <select id="dropdown" name="dropdown">
-            <option name="select-one" value ="">(select one)</option>
-            <option name="black" value="1">Black</option>
-            <option name="white" value="2">White</option>
-            <option name="golden" value="3">Golden</option>
-            <option name="brown" value="4">Brown</option>
-            <option name="brindle" value="5">Brindle</option>
-            <option name="other" value="6">Other</option>
-          </select>
-        </label>
-      </fieldset>
+    <header>
+      <h1 id="title">Super Dogs Website</h1>
+      <p id="description">This is a website dedicated to collections of dogs doing SUPER things</p>
+    </header>
 
-      <fieldset>
-        <legend>Is your dog normally an indoor or outdoor dog? (or both)</legend>
-        <div></div>
-        <label for="indoor"><input id="indoor" type="checkbox" value="indoor" name="in-out" class="inline" checked />He/she likes the quiet indoors.</label>
-        <label for="outdoor"><input id="outdoor" type="checkbox" value="outdoor" name="in-out" class="inline" />He/she likes the wild outdoors.</label> 
-      </fieldset>
+    <main>
+      <h2>Registration Form</h2>
+      <p class="small-text">Please fill out the form to upload pictures of your dog doing a super thing</p>
+      <form id="survey-form">
+        <fieldset>
+          <label id="name-label" for="name">Enter Your Dog's Name:
+            <input id="name" name="name" type="text" placeholder="Jacky" required />
+          </label>
+          <label id="trick-label" for="trick">Enter Your Dog's SUPER trick:
+            <input id="trick" name="trick" type="text" placeholder="jumping hoops" required />
+          </label>
+          <label id="email-label" for="email">Enter Your Email:
+            <input id="email" name="email" type="email" placeholder="jilliandoe@gmail.com" required />
+          </label>
+          <label id="number-label" for="number">Enter Your Dog's Age (a number):
+            <input id="number" name="number" type="number" min="0" max="25" placeholder="7" required />
+          </label>
+        </fieldset>
 
-      <fieldset>
-        <legend>Would you like to submit a request for your dog to perform at our studio? (required)</legend>
-        <div></div>
-        <label for="dog-yes"><input id="dog-yes" type="radio" value="yes" name="dog-choice" class="inline" checked />Yes, my dog would love to perform!</label>
-        <label for="dog-no"><input id="dog-no" type="radio" value="no" name="dog-choice" class="inline" />No, my dog is shy.</label>
-      </fieldset>
+        <fieldset>
+          <legend>What is your dog's hair color?</legend>
+          <label for="dropdown">
+            <select id="dropdown" name="dropdown">
+              <option name="select-one" value="">(select one)</option>
+              <option name="black" value="1">Black</option>
+              <option name="white" value="2">White</option>
+              <option name="golden" value="3">Golden</option>
+              <option name="brown" value="4">Brown</option>
+              <option name="brindle" value="5">Brindle</option>
+              <option name="other" value="6">Other</option>
+            </select>
+          </label>
+        </fieldset>
 
-      <fieldset>
-        <label for="bio">Provide your dog's bio:
-          <textarea id="bio" name="bio" rows="7" cols="30" placeholder="Jacky loves eating BBQ and running after cats..."></textarea>
-        </label>
-      </fieldset>
+        <fieldset>
+          <legend>Is your dog normally an indoor or outdoor dog? (or both)</legend>
+          <label for="indoor">
+            <input id="indoor" type="checkbox" value="indoor" name="in-out" class="inline" checked />
+            He/she likes the quiet indoors.
+          </label>
+          <label for="outdoor">
+            <input id="outdoor" type="checkbox" value="outdoor" name="in-out" class="inline" />
+            He/she likes the wild outdoors.
+          </label>
+        </fieldset>
 
-      <fieldset>
-        <legend>Upload Your Dog's Image</legend>
-        <div></div>
-        <label for="dog-image">Choose an image of your dog doing a "super thing":
-        <input id="dog-image" name="dog-image" type="file" accept="image/*" />
-        </label>
-      </fieldset>
+        <fieldset>
+          <legend>Would you like to submit a request for your dog to perform at our studio? (required)</legend>
+          <div></div>
+          <label for="dog-yes">
+            <input id="dog-yes" type="radio" value="yes" name="dog-choice" class="inline" checked />
+            Yes, my dog would love to perform!
+          </label>
+          <label for="dog-no">
+            <input id="dog-no" type="radio" value="no" name="dog-choice" class="inline" />
+            No, my dog is shy.
+          </label>
+        </fieldset>
 
+        <fieldset>
+          <label for="bio">Provide your dog's bio:
+            <textarea id="bio" name="bio" rows="7" cols="30" placeholder="Jacky loves eating BBQ and running after cats..."></textarea>
+          </label>
+        </fieldset>
 
-      <input id="submit" type="submit" value="Submit" />
-    </form>
+        <fieldset>
+          <legend>Upload Your Dog's Image</legend>
+          <div></div>
+          <label for="dog-image">Choose an image of your dog doing a "super thing":
+          <input id="dog-image" name="dog-image" type="file" accept="image/*" />
+          </label>
+        </fieldset>
+
+        <input id="submit" type="submit" value="Submit" />
+      </form>
+
+      <div id="success-message" style="display: none;">
+        <h2>Great! Your dog has been uploaded!</h2>
+        <p>Thank you for sharing your dog's super trick with us!</p>
+      </div>
+    </main>
+
+    <script>
+      const form = document.getElementById('survey-form');
+      const successMessage = document.getElementById('success-message');
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent form submission from reloading the page
+        document.body.innerHTML = ''; // Clear the entire body content
+        document.body.appendChild(successMessage); // Add the success message
+        successMessage.style.display = 'block'; // Show the success message
+      });
+    </script>
   </body>
+</html>
